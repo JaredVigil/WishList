@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Wish List</string>
+    <string name="user_name"><u>Jared Vigil</u></string>
+    <string name="user_Email">Example@testemail.com</string>
+    <string name="mid_place">This is a test</string>
+    <string name="friend_str"><b>Friends</b></string>
+    <string name="update_str"><b>Updates</b></string>
+    <string name="setting_str"><b>Settings</b></string>
+    <string name="new_list_sting"><b>New List +</b></string>
+    <string name="back_str">back</string>
+</resources>

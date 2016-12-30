@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Top layout photo and with user info-->
+    <!--<CheckedTextView
+        android:text="CheckedTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkedTextView" />-->
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:weightSum="1">
+            <ImageView
+                android:id="@+id/test_image"
+
+                android:contentDescription="user pic"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/power"
+                />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="25sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="@string/user_name"
+                    android:gravity="center"
+                    />
+                <TextView
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="@string/user_Email"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
+    <!-- Mid layout mid buttons -->
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="320dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="320dp">
+            <LinearLayout
+                android:id="@+id/mid_layout"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:layout_gravity="bottom"
+                android:layout_margin="20dip"
+
+                >
+
+
+                <TableLayout
+                    android:id="@+id/list_table"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="20dip">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="20dip"
+                        />
+                    <Button
+                        android:id="@+id/newButton"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:onClick="addList"
+                        android:layout_margin="20dip"
+                        android:text="@string/new_list_sting"
+                        />
+                    <EditText
+                        android:id="@+id/editListNameText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:inputType="text" />
+                </TableLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <!-- Bot layout Friends / Update / Setting info-->
+    <LinearLayout
+        android:id="@+id/bot_layout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <Button
+            android:layout_weight=".3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/friend_str"
+            android:onClick="goFirendsList"
+            />
+        <Button
+            android:layout_weight=".3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/update_str"
+            android:onClick="goUpdateList"
+            />
+        <Button
+            android:layout_weight=".3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/setting_str"
+            android:onClick="goSetting"
+            />
+    </LinearLayout>
+</LinearLayout>
