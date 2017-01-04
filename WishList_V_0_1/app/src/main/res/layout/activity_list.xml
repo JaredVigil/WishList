@@ -13,7 +13,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:text="test String"
+        android:text="This is a test to the push!"
         />
 </LinearLayout>
 
