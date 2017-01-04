@@ -35,33 +35,27 @@ public class GenActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
-
     public void goUpdateList(View v){
         Intent intent = new Intent(this, UpdateActivity.class);
         String message = "Updates";
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
-
     public void goSetting(View v){
         Intent intent = new Intent(this, settingsActivity.class);
         String message = "Settings";
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
-
     public void  goList(View v){
         Intent intent = new Intent(this, ListActivity.class);
         String message = "Settings";
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
-
     public void addList(View v){
         TableLayout listTable = (TableLayout) findViewById(R.id.list_table);
         LinearLayout layout = (LinearLayout) findViewById(R.id.mid_layout);
-        //LinearLayout mainLayout = (LinearLayout) findViewById(R.id.main_layout);
         TableRow newRow = new TableRow(this);
         LinearLayout col = new LinearLayout(this);
         col.setOrientation(LinearLayout.HORIZONTAL);
@@ -79,7 +73,6 @@ public class GenActivity extends AppCompatActivity {
         del.setLayoutParams(rel_bottone);
         String listS = "List: " + numList;
         numList++;
-
         del.setOnClickListener(DeleatList(newRow));
         newList.setOnClickListener(goListListener(v));
         edit.setOnClickListener(EditListListener(newList, newList));
@@ -96,9 +89,8 @@ public class GenActivity extends AppCompatActivity {
     View.OnClickListener DeleatList(final View v)  {
         return new View.OnClickListener() {
                 public void onClick(View v) {
-                    ((ViewGroup) v.getParent()).removeAllViews();
-                    shirk(v);
-                    numList--;
+                    AlertDialog diaBox = deletAlert(v);
+                    diaBox.show();
                 }
 
         };
@@ -112,13 +104,8 @@ public class GenActivity extends AppCompatActivity {
         };
     }
 
-    public void shirk(View v){
-        LinearLayout layout = (LinearLayout) findViewById(R.id.mid_layout);
-        layout.getLayoutParams().height -= 100;
-    }
 
     View.OnClickListener EditListListener(final View v, final Button list)  {
-
         return new View.OnClickListener() {
             public void onClick(View v) {
                 editList(v,list);
@@ -128,10 +115,29 @@ public class GenActivity extends AppCompatActivity {
 
     public void editList(View v, Button list){
 
-
     }
-
-
-
+    private AlertDialog deletAlert(final View v) {
+        AlertDialog myQuittingDialogBox =new AlertDialog.Builder(this)
+                //set message, title, and icon
+                .setTitle("Delete")
+                .setMessage("Are you sure you want to delete this List? All information on this list will be lost.")
+                .setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        //your deleting code
+                        LinearLayout layout = (LinearLayout) findViewById(R.id.mid_layout);
+                        ((ViewGroup) v.getParent()).removeAllViews();
+                        layout.getLayoutParams().height -= 100;
+                        numList--;
+                        dialog.dismiss();
+                    }
+                })
+                .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                })
+                .create();
+        return myQuittingDialogBox;
+    }
 
 }
