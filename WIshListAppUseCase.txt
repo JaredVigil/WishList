@@ -1,0 +1,48 @@
+﻿This Google doc will be a list of different  use cases / functionality the WishList App should be able to do. They are in three different categories of  functions. The first category of use cases / functionality will be the basic functions that the WishList App is required to do. These  use cases / functions will be the core of what the app will do and the first implemented into the design. The second category of functionality will be short term use cases / function goals for the WishList App. These functions will be not be essential to what the app will need to perform but will be additional functionality to help make user experience easier or new features that make the app more useful to the user. The last category of use cases / functionality will be long term function goals. These functions will again not be essential to what the app needs to do but addition functionality that we would like to see in the app one day in the future. These long term goal may be functions that make the app more profitable or expand in size. 
+
+
+________________
+
+
+Core Use Cases / Functions 
+* Users must have a unique username and password, maybe an email, to help differentiate between users.
+* As a user Create list 
+* Edit list 
+* Add and remove single items to a list.
+* Add details about a specific item to help clarify what the item is. Examples, name, price, where to get it, color, function, and description. 
+* Edit details about items.
+* Look up other another user’s wishlist.
+* Request look up list
+* Approve viewing of list.
+* MORE++
+
+
+________________
+
+
+Short Term Use Case / Functions
+* Have a friends list of users you look up often. 
+* Have an order of the items you want most to items you want least. 
+* Edit the order of your items.
+* Search for a specific item for a user. 
+* Search for a specific list for a user.
+* Add categories to organize the items  in a list.
+* Alert user when another user has looked at his wish list to remind the user to keep his wish lists up to date. 
+* Allow users to share their wish list on Facebook, Twitter, or other forms of social media. 
+* Allow users without an account to be able to look at an advertised wish list, but not be able to make their own wish lists without making an account. 
+* Allow users to upload photos of the item that they put on the wish list.
+* List privacy settings  
+* MORE++
+
+
+
+
+________________
+
+
+Long Term Uses Cases / Functions
+* Have ads from different companies to give suggestions on what the user might want to have on their wish list.
+* 3rd party online stores having pre set functionality to add items right from the online store fast and easy. (Like a “Add to cart” but a “Add to WishList App” button)
+* Keep an eye out for when an item goes on sell and alert users. 
+* When little detail is shown for a type item allow ads to show suggestion for that item. 
+* When an item is picked allow ads to show comparable prices / deals from more than one vendor.
