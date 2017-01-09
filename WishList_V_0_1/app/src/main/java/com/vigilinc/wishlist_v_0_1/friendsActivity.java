@@ -17,6 +17,7 @@ public class friendsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_friends);
     }
+
     public void goBack(View v){
         Intent intent = new Intent(this, GenActivity.class);
         startActivity(intent);

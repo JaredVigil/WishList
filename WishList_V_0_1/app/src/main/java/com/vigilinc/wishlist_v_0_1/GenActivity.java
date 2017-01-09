@@ -53,6 +53,7 @@ public class GenActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
+    /**/
     public void addList(View v){
         TableLayout listTable = (TableLayout) findViewById(R.id.list_table);
         LinearLayout layout = (LinearLayout) findViewById(R.id.mid_layout);
