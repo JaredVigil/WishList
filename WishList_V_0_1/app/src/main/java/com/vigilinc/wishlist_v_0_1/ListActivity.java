@@ -13,7 +13,7 @@ public class ListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list);
     }
     public void goBack(View v){
-        Intent intent = new Intent(this, GenActivity.class);
+        Intent intent = new Intent(this, IndexActivity.class);
         startActivity(intent);
     }
 }

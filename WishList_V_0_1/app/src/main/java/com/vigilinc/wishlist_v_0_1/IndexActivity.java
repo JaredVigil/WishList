@@ -10,22 +10,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
-import android.widget.TextView;
 
 
-public class GenActivity extends AppCompatActivity {
+public class IndexActivity extends AppCompatActivity {
     public final static String EXTRA_MESSAGE = "com.vigilinc.wishlist_v_0_1.MESSAGE";
     int numList = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gen_user);
+        setContentView(R.layout.activity_indexr);
     }
 
     public void goFirendsList(View v){
