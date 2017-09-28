@@ -9,4 +9,5 @@
     <string name="setting_str"><b>Settings</b></string>
     <string name="new_list_sting"><b>New List +</b></string>
     <string name="back_str">back</string>
+    <string name="title_activity_lop">lop</string>
 </resources>

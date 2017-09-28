@@ -15,10 +15,14 @@ import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 
 public class IndexActivity extends AppCompatActivity {
     public final static String EXTRA_MESSAGE = "com.vigilinc.wishlist_v_0_1.MESSAGE";
     int numList = 1;
+    ArrayList<HashMap<String, String>> listArray = new ArrayList<HashMap<String, String>>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,8 +74,11 @@ public class IndexActivity extends AppCompatActivity {
         newList.setLayoutParams(rel_list);
         edit.setLayoutParams(rel_bottone);
         del.setLayoutParams(rel_bottone);
-        String listS = "List: " + numList;
-        numList++;
+        String listS = "List: " + (listArray.size() + 1);
+        //numList++;
+        HashMap<String, String> listMap = new HashMap<String, String>();
+        listMap.put("name", listS);
+        listArray.add(listMap);
         del.setOnClickListener(DeleatList(newRow));
         newList.setOnClickListener(goListListener(v));
         edit.setOnClickListener(EditListListener(newList, newList));
@@ -137,6 +144,30 @@ public class IndexActivity extends AppCompatActivity {
                 })
                 .create();
         return myQuittingDialogBox;
+    }
+
+    public void test(){
+
+    }
+
+
+    /*
+
+
+    This is a test
+     */
+
+
+
+
+
+
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+
+        //outState.putParcelableArrayList("listArray", listArray);
+        super.onSaveInstanceState(outState);
     }
 
 }
